@@ -1,0 +1,234 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    package es.unileon.prg.tema6;<a name="line.1"></a>
+<FONT color="green">002</FONT>    /**<a name="line.2"></a>
+<FONT color="green">003</FONT>     * Clase con los ejercicios correspondientes a sentencias de repeticion:<a name="line.3"></a>
+<FONT color="green">004</FONT>     * sentencias con la instruccion "do-while".<a name="line.4"></a>
+<FONT color="green">005</FONT>     *<a name="line.5"></a>
+<FONT color="green">006</FONT>     * @author PRG<a name="line.6"></a>
+<FONT color="green">007</FONT>     * @version 1.0<a name="line.7"></a>
+<FONT color="green">008</FONT>     */<a name="line.8"></a>
+<FONT color="green">009</FONT>    public class Apartado030203 extends Apartado {<a name="line.9"></a>
+<FONT color="green">010</FONT>    <a name="line.10"></a>
+<FONT color="green">011</FONT>            protected String obtenerPractica(){<a name="line.11"></a>
+<FONT color="green">012</FONT>                    return "P-CTL";<a name="line.12"></a>
+<FONT color="green">013</FONT>            }<a name="line.13"></a>
+<FONT color="green">014</FONT>    <a name="line.14"></a>
+<FONT color="green">015</FONT>            protected String obtenerBloque() {<a name="line.15"></a>
+<FONT color="green">016</FONT>                    return "Instruccion &lt;&lt;do-while&gt;&gt;";<a name="line.16"></a>
+<FONT color="green">017</FONT>            }<a name="line.17"></a>
+<FONT color="green">018</FONT>    <a name="line.18"></a>
+<FONT color="green">019</FONT>            /**<a name="line.19"></a>
+<FONT color="green">020</FONT>             * Instruccion &lt;&lt;do-while&gt;&gt; - Ejercicio1.<a name="line.20"></a>
+<FONT color="green">021</FONT>             *<a name="line.21"></a>
+<FONT color="green">022</FONT>             * Programar el codigo que ofrezca un menu de opciones al usuario  hasta que seleccione la opcion salir.<a name="line.22"></a>
+<FONT color="green">023</FONT>             * <a name="line.23"></a>
+<FONT color="green">024</FONT>             */<a name="line.24"></a>
+<FONT color="green">025</FONT>            public void ejercicio01() {<a name="line.25"></a>
+<FONT color="green">026</FONT>                    cabecera("01","");<a name="line.26"></a>
+<FONT color="green">027</FONT>    <a name="line.27"></a>
+<FONT color="green">028</FONT>                    // Inicio modificacion<a name="line.28"></a>
+<FONT color="green">029</FONT>                    int opcion;<a name="line.29"></a>
+<FONT color="green">030</FONT>                    <a name="line.30"></a>
+<FONT color="green">031</FONT>                    do{<a name="line.31"></a>
+<FONT color="green">032</FONT>                            System.out.println("1- Opcion 1");<a name="line.32"></a>
+<FONT color="green">033</FONT>                            System.out.println("2- Opcion 2");<a name="line.33"></a>
+<FONT color="green">034</FONT>                            System.out.println("3- Opcion 3");<a name="line.34"></a>
+<FONT color="green">035</FONT>                            System.out.println("4- Salir");<a name="line.35"></a>
+<FONT color="green">036</FONT>                            <a name="line.36"></a>
+<FONT color="green">037</FONT>                            System.out.println("Introduce una opcion");<a name="line.37"></a>
+<FONT color="green">038</FONT>                            opcion=Teclado.readInteger();<a name="line.38"></a>
+<FONT color="green">039</FONT>                            <a name="line.39"></a>
+<FONT color="green">040</FONT>                    }while (opcion!=4);<a name="line.40"></a>
+<FONT color="green">041</FONT>                            <a name="line.41"></a>
+<FONT color="green">042</FONT>                    System.out.println("\nAdios");<a name="line.42"></a>
+<FONT color="green">043</FONT>            // Fin modificacion<a name="line.43"></a>
+<FONT color="green">044</FONT>            }<a name="line.44"></a>
+<FONT color="green">045</FONT>    <a name="line.45"></a>
+<FONT color="green">046</FONT>            /**<a name="line.46"></a>
+<FONT color="green">047</FONT>             * Instruccion &lt;&lt;do-while&gt;&gt; - Ejercicio2.<a name="line.47"></a>
+<FONT color="green">048</FONT>             *<a name="line.48"></a>
+<FONT color="green">049</FONT>             * Programar el  codigo que lea numeros enteros hasta que el usuario introduzca un valor igual a cero <a name="line.49"></a>
+<FONT color="green">050</FONT>             * o hasta que el usuario introduzca dos veces seguidas el mismo numero.<a name="line.50"></a>
+<FONT color="green">051</FONT>             * <a name="line.51"></a>
+<FONT color="green">052</FONT>             * Similar al  ejercicio02() de la clase Apartado030202 pero empleando la sentencia do-while).<a name="line.52"></a>
+<FONT color="green">053</FONT>             *<a name="line.53"></a>
+<FONT color="green">054</FONT>             */<a name="line.54"></a>
+<FONT color="green">055</FONT>            public void ejercicio02() {<a name="line.55"></a>
+<FONT color="green">056</FONT>                    cabecera("02", "");<a name="line.56"></a>
+<FONT color="green">057</FONT>    <a name="line.57"></a>
+<FONT color="green">058</FONT>                    // Inicio modificacion<a name="line.58"></a>
+<FONT color="green">059</FONT>                    <a name="line.59"></a>
+<FONT color="green">060</FONT>                    boolean repetido=false;<a name="line.60"></a>
+<FONT color="green">061</FONT>                    int actual, anterior=0;<a name="line.61"></a>
+<FONT color="green">062</FONT>                    <a name="line.62"></a>
+<FONT color="green">063</FONT>                    do{<a name="line.63"></a>
+<FONT color="green">064</FONT>                            System.out.println("Introduce un numero:");<a name="line.64"></a>
+<FONT color="green">065</FONT>                            actual=Teclado.readInteger();<a name="line.65"></a>
+<FONT color="green">066</FONT>                            if (actual==anterior)<a name="line.66"></a>
+<FONT color="green">067</FONT>                                    repetido=true;<a name="line.67"></a>
+<FONT color="green">068</FONT>                            anterior=actual;<a name="line.68"></a>
+<FONT color="green">069</FONT>                    }while ((actual!=0) &amp;&amp;  !repetido);<a name="line.69"></a>
+<FONT color="green">070</FONT>                    <a name="line.70"></a>
+<FONT color="green">071</FONT>                    <a name="line.71"></a>
+<FONT color="green">072</FONT>                    System.out.println("FIN");<a name="line.72"></a>
+<FONT color="green">073</FONT>                    <a name="line.73"></a>
+<FONT color="green">074</FONT>                    <a name="line.74"></a>
+<FONT color="green">075</FONT>                    // Fin modificacion<a name="line.75"></a>
+<FONT color="green">076</FONT>            }<a name="line.76"></a>
+<FONT color="green">077</FONT>    <a name="line.77"></a>
+<FONT color="green">078</FONT>            /**<a name="line.78"></a>
+<FONT color="green">079</FONT>             * Instruccion &lt;&lt;do-while&gt;&gt; - Ejercicio3.<a name="line.79"></a>
+<FONT color="green">080</FONT>             *<a name="line.80"></a>
+<FONT color="green">081</FONT>             * Programar el codigo que lea la base y la altura de un numero indeterminado de rectangulos y<a name="line.81"></a>
+<FONT color="green">082</FONT>             * cree los correspondientes objetos de tipo Rectangulo. Para cada rectangulo el programa mostrara <a name="line.82"></a>
+<FONT color="green">083</FONT>             * por pantalla su area y si es un cuadrado o un rectangulo. El programa terminara cuando alguno <a name="line.83"></a>
+<FONT color="green">084</FONT>             * de los lados del cuadrilatero sea menor o igual que  0.<a name="line.84"></a>
+<FONT color="green">085</FONT>             * <a name="line.85"></a>
+<FONT color="green">086</FONT>             */<a name="line.86"></a>
+<FONT color="green">087</FONT>            public void ejercicio03() {<a name="line.87"></a>
+<FONT color="green">088</FONT>                    cabecera("03", "");<a name="line.88"></a>
+<FONT color="green">089</FONT>    <a name="line.89"></a>
+<FONT color="green">090</FONT>                    // Inicio modificacion<a name="line.90"></a>
+<FONT color="green">091</FONT>                    Rectangulo rectangulo=null;<a name="line.91"></a>
+<FONT color="green">092</FONT>                    int base, altura;<a name="line.92"></a>
+<FONT color="green">093</FONT>                                    <a name="line.93"></a>
+<FONT color="green">094</FONT>                    do{<a name="line.94"></a>
+<FONT color="green">095</FONT>                            System.out.print("Introduce la base del rectangulo :");<a name="line.95"></a>
+<FONT color="green">096</FONT>                            base=Teclado.readInteger();<a name="line.96"></a>
+<FONT color="green">097</FONT>                            System.out.print("Introduce la altura del rectangulo :");<a name="line.97"></a>
+<FONT color="green">098</FONT>                            altura=Teclado.readInteger();<a name="line.98"></a>
+<FONT color="green">099</FONT>                            rectangulo=new Rectangulo(base,altura);<a name="line.99"></a>
+<FONT color="green">100</FONT>                            <a name="line.100"></a>
+<FONT color="green">101</FONT>                            System.out.println(rectangulo);<a name="line.101"></a>
+<FONT color="green">102</FONT>                            System.out.println("Area: "+rectangulo.getArea());<a name="line.102"></a>
+<FONT color="green">103</FONT>                            System.out.println();<a name="line.103"></a>
+<FONT color="green">104</FONT>                    }       <a name="line.104"></a>
+<FONT color="green">105</FONT>                    while (base&gt;0 &amp;&amp; altura&gt;0);<a name="line.105"></a>
+<FONT color="green">106</FONT>                    <a name="line.106"></a>
+<FONT color="green">107</FONT>                    System.out.println("FIN");<a name="line.107"></a>
+<FONT color="green">108</FONT>                    // Fin modificacion<a name="line.108"></a>
+<FONT color="green">109</FONT>            }<a name="line.109"></a>
+<FONT color="green">110</FONT>    <a name="line.110"></a>
+<FONT color="green">111</FONT>            /**<a name="line.111"></a>
+<FONT color="green">112</FONT>             * Instruccion &lt;&lt;do-while&gt;&gt; - Ejercicio4.<a name="line.112"></a>
+<FONT color="green">113</FONT>             *<a name="line.113"></a>
+<FONT color="green">114</FONT>             * Programar el codigo que dado un numero entero introducido por teclado indique si es o no perfecto.<a name="line.114"></a>
+<FONT color="green">115</FONT>             * Un numero entero es perfecto si es igual a la suma de los sus divisores positivos menores que el.<a name="line.115"></a>
+<FONT color="green">116</FONT>             * Ejemplos<a name="line.116"></a>
+<FONT color="green">117</FONT>             * &lt;ul&gt;<a name="line.117"></a>
+<FONT color="green">118</FONT>             * &lt;li&gt;6 es perfecto porque<a name="line.118"></a>
+<FONT color="green">119</FONT>             * &lt;ul&gt;<a name="line.119"></a>
+<FONT color="green">120</FONT>             * &lt;li&gt; Sus divisores menores que el  son 1, 2, 3  y<a name="line.120"></a>
+<FONT color="green">121</FONT>             * &lt;li&gt; 1 + 2 + 3 = 6;<a name="line.121"></a>
+<FONT color="green">122</FONT>             * &lt;/ul&gt;<a name="line.122"></a>
+<FONT color="green">123</FONT>             * &lt;li&gt; 8 no es perfecto porque<a name="line.123"></a>
+<FONT color="green">124</FONT>             * &lt;ul&gt;<a name="line.124"></a>
+<FONT color="green">125</FONT>             * &lt;li&gt; Sus divisores menores que el son 1, 2,4  y<a name="line.125"></a>
+<FONT color="green">126</FONT>             * &lt;li&gt; 1+2+4  es distinto de  8<a name="line.126"></a>
+<FONT color="green">127</FONT>             * &lt;/ul&gt;<a name="line.127"></a>
+<FONT color="green">128</FONT>             * &lt;/ul&gt;<a name="line.128"></a>
+<FONT color="green">129</FONT>             * <a name="line.129"></a>
+<FONT color="green">130</FONT>             */<a name="line.130"></a>
+<FONT color="green">131</FONT>            public void ejercicio04() {<a name="line.131"></a>
+<FONT color="green">132</FONT>                    cabecera("04", "");<a name="line.132"></a>
+<FONT color="green">133</FONT>    <a name="line.133"></a>
+<FONT color="green">134</FONT>                    // Inicio modificacion<a name="line.134"></a>
+<FONT color="green">135</FONT>                    int numero;<a name="line.135"></a>
+<FONT color="green">136</FONT>                    int sumaDivisores,divisor;<a name="line.136"></a>
+<FONT color="green">137</FONT>                    <a name="line.137"></a>
+<FONT color="green">138</FONT>                    <a name="line.138"></a>
+<FONT color="green">139</FONT>                    System.out.print("Introduce un numero:");<a name="line.139"></a>
+<FONT color="green">140</FONT>                    numero=Teclado.readInteger();<a name="line.140"></a>
+<FONT color="green">141</FONT>                    <a name="line.141"></a>
+<FONT color="green">142</FONT>                    <a name="line.142"></a>
+<FONT color="green">143</FONT>                    System.out.print("\nDivisores: ");<a name="line.143"></a>
+<FONT color="green">144</FONT>                    sumaDivisores=0;<a name="line.144"></a>
+<FONT color="green">145</FONT>                    divisor=1;<a name="line.145"></a>
+<FONT color="green">146</FONT>                    do{<a name="line.146"></a>
+<FONT color="green">147</FONT>                            <a name="line.147"></a>
+<FONT color="green">148</FONT>                            if(numero % divisor==0){<a name="line.148"></a>
+<FONT color="green">149</FONT>                                    sumaDivisores=sumaDivisores+divisor;<a name="line.149"></a>
+<FONT color="green">150</FONT>                                    System.out.print(divisor+" ");<a name="line.150"></a>
+<FONT color="green">151</FONT>                            }<a name="line.151"></a>
+<FONT color="green">152</FONT>                            divisor++;<a name="line.152"></a>
+<FONT color="green">153</FONT>                            <a name="line.153"></a>
+<FONT color="green">154</FONT>                    <a name="line.154"></a>
+<FONT color="green">155</FONT>                    }while (divisor&lt;numero);<a name="line.155"></a>
+<FONT color="green">156</FONT>                    <a name="line.156"></a>
+<FONT color="green">157</FONT>                    <a name="line.157"></a>
+<FONT color="green">158</FONT>                    System.out.println("\nSumaDivisores = "+sumaDivisores);<a name="line.158"></a>
+<FONT color="green">159</FONT>                    <a name="line.159"></a>
+<FONT color="green">160</FONT>                    if (numero==sumaDivisores)<a name="line.160"></a>
+<FONT color="green">161</FONT>                            System.out.println("El numero "+numero+ " es perfecto");<a name="line.161"></a>
+<FONT color="green">162</FONT>                    else<a name="line.162"></a>
+<FONT color="green">163</FONT>                            System.out.println("El numero "+numero+ " no es perfecto");<a name="line.163"></a>
+<FONT color="green">164</FONT>                    <a name="line.164"></a>
+<FONT color="green">165</FONT>                    <a name="line.165"></a>
+<FONT color="green">166</FONT>                    // Fin modificacion<a name="line.166"></a>
+<FONT color="green">167</FONT>            }<a name="line.167"></a>
+<FONT color="green">168</FONT>    }<a name="line.168"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

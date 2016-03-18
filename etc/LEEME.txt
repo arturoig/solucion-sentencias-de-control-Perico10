@@ -1,0 +1,136 @@
+Practica P-CTL
+
+Alumno:
+
+Horas dedicadas:
+
+Problemas surgidos al realizar la practica:
+
+Respuestas a la preguntas:
+
+
+****************************************************************************************************
+************************************** SENTENCIAS IF ***********************************************
+****************************************************************************************************
+
+
+
+/********************************************************************************************/
+-- ejercicio04 - Apartado 030101 --
+
+Al ejecutar el metodo solo se muestra por pantalla Resultado2 porque la segunda comparacion
+es la unica que retorna true
+
+		boolean a = true;
+		boolean b = false;
+		int n1=5, n2=8;
+
+	--  ((!a && b) || !(n2>n1)) -> ((!true && false) || !true)) -> ((false && false) || false) -> false
+	--  ((!a || b) || !(n1>n2)) -> ((!true || false) || !false)) -> ((false || false) || true) -> true
+	--  ((n1>=n2) && (a || b))  -> (false && (true || false)) -> (true && false) -> false
+
+/***********************************************************************************************/
+
+
+
+/********************************************************************************************/
+-- ejercicio09 - Apartado 030101 --
+
+El resultado de la comparacion es que los dos numeros (que son objetos) son distintos.
+Aunque el valor de n1 y n2 es el mismo (10), n1 y n2 son variables que referencian a  objetos diferentes. 
+Al comparar las variables n1 y n2 con el operador = se esta comparando el valor de que conetienen no el 
+valor de los atributos de los objetos a los que referencian. 
+
+/********************************************************************************************/
+
+
+/********************************************************************************************/
+-- ejercicio10 - Apartado 030101 --
+
+
+    //Primera Ejecucion -> No esta implementado el metodo equals en la clase NumeroEntero 
+
+    NumeroEntero n1 = new NumeroEntero(10);
+    NumeroEntero n2 = new NumeroEntero(10);
+    NumeroEntero aux=n1;
+
+  	if (n1.equals(n2)==true){
+         System.out.println("N1 y N2 son iguales");
+ 	}
+    //Como n1 y n2 no referencian al mismo objeto la condicion del if es falsa
+    	 	
+	 if (n1.equals(n2)==false){
+	     System.out.println("N1 y N2 son distintos");
+	 }
+	 
+	 //Como n1 y n2 no referencian al mismo objeto la condicion del if es verdadera
+	
+	 if (n1.equals(aux)==true){
+	     System.out.println("N1 y AUX son iguales");
+	 }
+	 
+	 //Como n1 y aux si referencian al mismo objeto la condicion del if es verdadera
+	
+	 if (n2.equals(aux)==true){
+	    System.out.println("N2  y AUX son iguales");
+	 }
+	
+	 //Como n1 y aux no referencian al mismo objeto la condicion del if es falsa
+
+
+	Resultado de la ejecucion:
+	--------------------------
+	
+	N1 y N2 son distintos
+	N1 y AUX son iguales
+
+
+	//Seguna Ejecucion -> Si esta implementado el metodo equals en la clase NumeroEntero 
+
+ 	NumeroEntero n1 = new NumeroEntero(10);
+    NumeroEntero n2 = new NumeroEntero(10);
+    NumeroEntero aux=n1;
+
+  	if (n1.equals(n2)==true){
+         System.out.println("N1 y N2 son iguales");
+ 	}
+    //Como el valor de los objetos  n1 y n2 es el mismo el resultado de equals es verdadero
+    	 	
+	if (n1.equals(n2)==false){
+	     System.out.println("N1 y N2 son distintos");
+	}
+	 
+	//Como el valor de los objetos  n1 y n2 es el mismo el resultado de equals es verdadero
+	
+	if (n1.equals(aux)==true){
+	    System.out.println("N1 y AUX son iguales");
+	}
+	 
+	//Como el valor de los objetos  n1 y aux es el mismo el resultado de equals es verdadero
+	
+	if (n2.equals(aux)==true){
+	   System.out.println("N2  y AUX son iguales");
+
+	//Como el valor de los objetos  n2 y aux es el mismo el resultado de equals es verdadero
+
+
+	Resultado de la ejecucion:
+	--------------------------
+	N1 y N2 son iguales
+	N1 y AUX son iguales
+	N2 y AUX son iguales
+
+
+/********************************************************************************************/
+
+
+
+/********************************************************************************************/
+-- ejercicio03 - Apartado 030103 --
+
+No se pueden compara objetos empleado los operadores >,<,<=, =>, ...
+
+/********************************************************************************************/
+
+
+
